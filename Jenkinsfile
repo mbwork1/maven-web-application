@@ -17,7 +17,6 @@ pipeline{
         sh "mvn clean package"
       }
     }
-    /*
     stage('4CodeQuality'){
       steps{
         sh "echo 'Perfoming CodeQualityAnalysis' "
