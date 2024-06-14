@@ -60,6 +60,5 @@ Landmark
 +1 437 215 2483''', recipientProviders: [buildUser(), developers()], subject: 'success', to: 'awstoga@gmail.com'
     }
   } 
-  */
 }
 }
