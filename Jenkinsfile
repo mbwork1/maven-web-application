@@ -7,7 +7,7 @@ pipeline{
     stage('1GetCode'){
       steps{
         sh "echo 'cloning the latest application version' "
-        git branch: 'feature', credentialsId: 'gitHubCredentials', url: 'https://github.com/mbwork1/maven-web-application.git'
+        git branch: 'master', url: 'https://github.com/mbwork1/maven-web-application.git'
       }
     }
     stage('3Test+Build'){
