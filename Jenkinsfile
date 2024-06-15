@@ -54,10 +54,12 @@ pipeline{
       }
     }
     stage('9.emailnotification'){
+      steps{
       emailext body: '''The build and Deployment status for tesla-webapp.
 
 Regards,
 Landmark Technologies''', recipientProviders: [developers(), upstreamDevelopers(), buildUser()], subject: 'Job Status', to: 'awstoga@gmail.com'
+      }
     }
 }
 }
