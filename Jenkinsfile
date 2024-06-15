@@ -42,10 +42,22 @@ pipeline{
         }
       }
     }
-     stage('7.deploy2prod'){
+    stage('7.deploy2prod'){
       steps{
         deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.153.146.4:8088/')], contextPath: null, war: 'target/*war'
       }
+    }
+    stage('8.apm'){
+      steps{
+        sh " echo 'monitoring, observation and alerting' "
+        sh " echo 'application performance Monitoring in progress' "
+      }
+    }
+    stage('9.emailnotification'){
+      emailext body: '''The build and Deployment status for tesla-webapp.
+
+Regards,
+Landmark Technologies''', recipientProviders: [developers(), upstreamDevelopers(), buildUser()], subject: 'Job Status', to: 'awstoga@gmail.com'
     }
 }
 }
