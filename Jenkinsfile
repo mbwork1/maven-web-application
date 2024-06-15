@@ -1,5 +1,7 @@
 pipeline{
-  agent any 
+  agent any
+  //options{}
+  //triggers{}
   tools {
     maven "Maven 3.9.7"
   }  
@@ -13,7 +15,7 @@ pipeline{
     stage('2.Test+Build'){
       steps{
         sh "echo 'running JUnit-test-cases' "
-        sh "echo 'testing must passed to create artifacts ' "
+        sh "echo 'testing must passed to create artifacts' "
         sh "mvn clean package"
       }
     }
@@ -21,15 +23,18 @@ pipeline{
       steps{
         sh "echo 'Perfoming CodeQualityAnalysis' "
         sh "mvn sonar:sonar"
+        sh "echo 'CodeQualityAnalysis completed' "
       }
     }
     stage('4.uploadNexus'){
       steps{
         sh "mvn deploy"
+        sh "echo 'Build and release completed' "
       }
     } 
-    stage('5.deploy2prod'){
+    stage('5.deploy2UAT'){
       steps{
+        sh "echo 'Deployment is ready for the client review' "
         deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.153.146.4:8088/')], contextPath: null, war: 'target/*war'
       }
     }
