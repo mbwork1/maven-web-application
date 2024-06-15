@@ -96,13 +96,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://3.218.106.254:8089/imgoinup/repository/tesla-pipeline-releases/</url>
+	      <url>http://54.243.162.232:8089/imgoinup/repository/tesla-pipeline-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://3.218.106.254:8089/imgoinup/repository/tesla-pipeline-snapshots/</url>
+	      <url>http://54.243.162.232:8089/imgoinup/repository/tesla-pipeline-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
