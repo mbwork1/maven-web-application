@@ -52,19 +52,28 @@ pipeline{
         deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.153.146.4:8088/')], contextPath: null, war: 'target/*war'
       }
     }
-    stage('8.apm'){
-      steps{
-        sh " echo 'monitoring, observation and alerting' "
-        sh " echo 'application performance Monitoring in progress' "
-      }
-    }
-    stage('9.emailnotification'){
-      steps{
-      emailext body: '''The build and Deployment status for tesla-webapp.
+}
+post{
+  always{
+    emailext body: '''Hi Team,
 
-Regards,
-Landmark Technologies''', recipientProviders: [developers(), upstreamDevelopers(), buildUser()], subject: 'Job Status', to: 'awstoga@gmail.com'
-      }
-    }
+Build status.
+
+Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'awstoga@gmail.com'
+  }
+  success{
+    emailext body: '''Hi Team,
+
+Build succeded.
+
+Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'awstoga@gmail.com'
+  }
+  failure{
+    emailext body: '''Hi Team,
+
+Build failed.
+
+Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'awstoga@gmail.com'
+  }
 }
 }
