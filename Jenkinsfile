@@ -59,21 +59,21 @@ post{
 
 Build status.
 
-Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'awstoga@gmail.com'
+Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'mbwork1@yahoo.com'
   }
   success{
     emailext body: '''Hi Team,
 
 Build succeded.
 
-Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'awstoga@gmail.com'
+Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'mbwork1@yahoo.com'
   }
   failure{
     emailext body: '''Hi Team,
 
 Build failed.
 
-Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'awstoga@gmail.com'
+Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'mbwork1@yahoo.com'
   }
 }
 }
