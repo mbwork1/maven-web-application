@@ -1,0 +1,17 @@
+@Library('LMS-sharedlibs') _
+
+pipeline{
+  agent any
+  tools {
+    maven "Maven 3.9.7"
+  }
+
+  stages{
+    stage('cloneGITREPO'){
+      steps {
+        sh "echo 'cloning the latest application version' "
+        git branch: 'master', url: 'https://github.com/mbwork1/maven-web-application.git'
+      }
+    }
+  }
+}
