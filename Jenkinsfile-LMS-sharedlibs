@@ -13,5 +13,20 @@ pipeline{
         git branch: 'master', url: 'https://github.com/mbwork1/maven-web-application.git'
       }
     }
+    stage('Build'){
+      steps{
+        common("Build")
+      }
+    }
+    stage('SonarQube Report'){
+      steps{
+        common("SonarQube Report")
+      }
+    }
+    stage('Upload Into Nexus'){
+      steps{
+        common("Upload Into Nexus")
+      }
+    }
   }
 }
