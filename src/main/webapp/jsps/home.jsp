@@ -17,6 +17,7 @@
 	Class36 DevOps MasterClass started on April 13, 2024.
 	Class37 DevOps MasterClass will start on July 13, 2024.
 	Class38 DevOps MasterClass will start soon after.
+	RED DOT TEM WAS HERE. NEXT BIG THING IN IT!!!
         Please invite all your contacts and friends for this life changing course.
 </h1>
 <hr>
