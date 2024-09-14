@@ -35,7 +35,7 @@ pipeline{
     stage('5.deploy2UAT'){
       steps{
         sh "echo 'Deployment is ready for the client review' "
-        deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.153.146.4:8088/,http://54.167.1.91/,http://52.203.0.7/')], contextPath: null, war: 'target/*war'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://35.153.146.4:8088/,http://3.83.176.143/,http://3.94.92.136/')], contextPath: null, war: 'target/*war'
       }
     }
     stage('6.ManualApproval'){
