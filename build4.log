@@ -1,0 +1,53 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.mt:maven-stanalone-application >-----------------
+[INFO] Building maven-stanalone-application 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.pom
+Progress (1): 1.4/7.8 kBProgress (1): 2.8/7.8 kBProgress (1): 4.1/7.8 kBProgress (1): 5.5/7.8 kBProgress (1): 6.9/7.8 kBProgress (1): 7.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.pom (7.8 kB at 24 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.jar
+Progress (1): 1.4/31 kBProgress (1): 2.8/31 kBProgress (1): 4.1/31 kBProgress (1): 5.5/31 kBProgress (1): 6.9/31 kBProgress (1): 8.3/31 kBProgress (1): 9.7/31 kBProgress (1): 11/31 kB Progress (1): 12/31 kBProgress (1): 14/31 kBProgress (1): 15/31 kBProgress (1): 17/31 kBProgress (1): 18/31 kBProgress (1): 19/31 kBProgress (1): 21/31 kBProgress (1): 22/31 kBProgress (1): 23/31 kBProgress (1): 25/31 kBProgress (1): 26/31 kBProgress (1): 28/31 kBProgress (1): 29/31 kBProgress (1): 30/31 kBProgress (1): 31 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-install-plugin/3.1.1/maven-install-plugin-3.1.1.jar (31 kB at 744 kB/s)
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ maven-stanalone-application ---
+[INFO] skip non existing resourceDirectory /Users/fullblast/Documents/javaProjLANDMARK/maven-standalone-application/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ maven-stanalone-application ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 1 source file with javac [debug target 11] to target/classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ maven-stanalone-application ---
+[INFO] skip non existing resourceDirectory /Users/fullblast/Documents/javaProjLANDMARK/maven-standalone-application/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ maven-stanalone-application ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug target 11] to target/test-classes
+[WARNING] system modules path not set in conjunction with -source 11
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ maven-stanalone-application ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit.JUnit3Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.mt.sample.test.HelloWorldTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in com.mt.sample.test.HelloWorldTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.1.0:jar (default-jar) @ maven-stanalone-application ---
+[INFO] Building jar: /Users/fullblast/Documents/javaProjLANDMARK/maven-standalone-application/target/maven-stanalone-application-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ maven-stanalone-application ---
+[INFO] Installing /Users/fullblast/Documents/javaProjLANDMARK/maven-standalone-application/pom.xml to /Users/fullblast/clmr/com/mt/maven-stanalone-application/0.0.1-SNAPSHOT/maven-stanalone-application-0.0.1-SNAPSHOT.pom
+[INFO] Installing /Users/fullblast/Documents/javaProjLANDMARK/maven-standalone-application/target/maven-stanalone-application-0.0.1-SNAPSHOT.jar to /Users/fullblast/clmr/com/mt/maven-stanalone-application/0.0.1-SNAPSHOT/maven-stanalone-application-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.368 s
+[INFO] Finished at: 2024-05-25T16:31:06-04:00
+[INFO] ------------------------------------------------------------------------
